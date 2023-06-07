@@ -19,6 +19,9 @@ const Tvshows = () => {
       .then((data) => setShowSummary(data));
   };
 
+  const handleBackClick = () => {
+    setSelectedShow(null);
+  };
   const handleBookTicket = () => {
     setIsBookingOpen(true);
   };
@@ -28,6 +31,7 @@ const Tvshows = () => {
   };
 
   useEffect(() => {
+    console.log(ShowSummary)
   }, [selectedShow, ShowSummary]);
 
   useEffect(() => {
@@ -70,7 +74,7 @@ const Tvshows = () => {
         </div>
       )}
       {selectedShow && ShowSummary && !isBookingOpen && (
-        <Summary onBookTicket={handleBookTicket} el={ShowSummary} />
+        <Summary onBookTicket={handleBookTicket} onBackClick={handleBackClick} el={ShowSummary} />
       )}
       {isBookingOpen && (
         <TicketBookingForm

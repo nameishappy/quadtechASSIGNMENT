@@ -21,16 +21,14 @@ const Showcard = (props) => {
         <div className="p-5 w-full">
             <h3 className="text-3xl mb-2 text-gray-700" >Show info</h3>
           <a href="#">
-            <h5 className="mb-2 text-2xl tracking-tight text-black">
-             <span className="font-bold text-2xl">Title: </span> {props.title}
-            </h5>
+          <p className="mb-2 text-xl font-semibold tracking-tight text-gray-700"><span className="font-bold text-2xl">Title: </span>{props.title}</p>
           </a>
           <p className="mb-2 text-xl font-semibold tracking-tight text-gray-700"><span className="font-bold text-2xl">Language: </span>{props.language}</p>
           {/* <p className="mb-2 text-xl font-semibold tracking-tight text-gray-700"><span className="font-bold text-2xl">Network: </span><a href="#">{props.network.name}</a></p> */}
           <p className="mb-2 text-xl font-semibold tracking-tight text-gray-700"><span className="font-bold text-2xl">Rating: </span> {props.rating}</p>
           <p className="mb-2 text-xl font-semibold tracking-tight text-gray-700"><span className="font-bold text-2xl">Status: </span> {props.status}</p>
           <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 my-2 focus:outline-none"
-          onClick={()=>handleOnClick(props.id)} >See more</button>
+          onClick={()=>handleOnClick(props.id)} >Show Details</button>
         </div>
       </div>
     </div>
